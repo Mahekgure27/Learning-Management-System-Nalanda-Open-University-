@@ -200,6 +200,30 @@
       padding-right: 5px;
       padding-left: 5px;
     }
+
+
+    /* Responsive tweak for small screens */
+  @media (max-width: 600px) {
+    .about-section .row h3 {
+      text-align: center;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    .about-section .col-sm-7 {
+      padding: 0 !important;
+      text-align: center !important;
+      font-size: 16px !important;
+    }
+    .about-section .col-sm-5 {
+      padding: 0 !important;
+      margin-top: 20px;
+    }
+    .about-section .col-sm-5 img {
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+
   }
 </style>
 <!--Home-->
@@ -253,7 +277,7 @@
     <div class="row">
       <h3>ABOUT NOU e-GYAN PORTAL</h3>
     </div>
-    <div class="row">
+    <div class="row align-items-center">
       <div class="col-sm-7" style="text-align: justify">
         <p style="font-family: open sans, sans-serif; font-size: 17.5px">
           <b>Nalanda Open University</b> welcomes all our students, faculties &
@@ -272,12 +296,22 @@
           well as Nalanda Open University Admins when they are at a distance.
         </p>
       </div>
-      <div class="col-sm-5">
-        <img src="{% static 'images/contactimg.jpeg' %}" class="img-fluid" />
+
+      <!-- Image column -->
+      <div class="col-sm-5 text-align-right d-flex justify-content-center  no-extra-padding">
+        <img 
+          src="{% static 'images/contactimg.jpeg' %}" 
+          class="img-fluid rounded shadow mx-auto d-block" 
+          alt="About NOU e-Gyan Portal"
+          style="max-width: 100%; height: auto;" 
+        />
       </div>
+
+             
     </div>
   </section>
-</div>
+</div> 
+
 
 <!--gallery-->
 <div class="row" style="padding-top: 10vh">
